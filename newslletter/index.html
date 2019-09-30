@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="styles.css">
+
+<body>
+
+<!-- Header with Slideshow -->
+<header class="w3-display-container w3-center">
+  <button class="w3-button w3-block w3-green w3-hide-large w3-hide-medium" onclick="document.getElementById('download').style.display='block'">Inscribete<i class="fa fa-android"></i> <i class="fa fa-apple"></i> <i class="fa fa-windows"></i></button>
+  <div class="mySlides w3-animate-opacity">
+    <img class="img1" src="./imagenes/noche.jpg" alt="Image 1" style="min-width:500px" width="1500" height="1000">
+    <div class="w3-display-left w3-padding w3-hide-small" style="width:40%"  >
+      <div class="w3-black opacity hover-opacity-off w3-padding-large w3-round-large">
+        <h1 class="w3-xlarge  w3-text-white">Vive cartagena</h1>
+        <hr class="opacity">
+        <p>ENTERATE DE TODAS LAS NOVEDADES DE CARTAGENA QUE TENEMOS PARA TI </p>
+        <p><button class="w3-button w3-block w3-white w3-round" onclick="document.getElementById('download').style.display='block'">Inscribete </button></p>
+      </div>
+    </div>
+  </div>
+ 
+  
+ 
+</header>
+
+<!-- The App Section -->
+<div class="w3-padding-64 w3-white">
+  <div class="w3-row-padding">
+    <div class="w3-col l8 m6">
+      <h1 class="w3-jumbo w3-text-orange"><b>CARTAGENA VIVE</b></h1>
+      <h1 class="w3-xxxlarge w3-text-green"><b>CONOCE NUESTROS PLANES!</b></h1>
+      <p style="text-align: justify;"><span class="w3-xlarge" >Tours asombrosos y divertidas aventuras esperándote</span> 
+        <br>Los atractivos turísticos de Cartagena van más allá de playas y callecitas históricas. 
+        La ciudad cuenta con una excelente oferta gastronómica y una importante infraestructura hotelera y turística. 
+        Es una ciudad fantástica que guarda los secretos de la historia en sus murallas y balcones, en sus construcciones y en sus angostos caminos de piedra. Enmarcada por una hermosa bahía, 
+        Cartagena de Indias es una de las ciudades más bellas y mejor conservadas de América, un tesoro que se convierte en uno de los destinos turísticos en Colombia más visitados</p>
+      <button class="w3-button w3-light-grey w3-padding-large w3-section w3-hide-small" onclick="document.getElementById('download').style.display='block'">
+        <i class="fa fa-download"></i> En nuestro portafolio elige el destino favorito justo para tus vacaciones
+      </button>
+      
+    </div>
+    <div class="w3-col l4 m6">
+      <img src="./imagenes/dia.jpg" class="w3-image w3-right w3-hide-small" width="335" height="471">
+      <div class="w3-center w3-hide-large w3-hide-medium">
+        <button class="w3-button w3-block w3-padding-large" onclick="document.getElementById('download').style.display='block'">
+          <i class="fa fa-download"></i> Download Application
+        </button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal, ventana emergente-->
+<div id="download" class="w3-modal w3-animate-opacity">
+  <div class="w3-modal-content" style="padding:32px">
+    <div class="w3-container w3-white">
+      <i onclick="document.getElementById('download').style.display='none'" class="fa fa-remove w3-xlarge w3-button w3-transparent w3-right w3-xlarge"></i>
+      <h2 class="w3-wide">Inscribete a nuestro NEW LETTER</h2>
+      <p>Recibe toda la informacion de nuestros TOURS TURISTICOS Y DISFRUTA todo lo que tenemos para TI</p>
+      <i class="fa fa-android w3-large"></i> <i class="fa fa-apple w3-large"></i> <i class="fa fa-windows w3-large"></i>
+      <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
+      <button type="button" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('download').style.display='none'"> Inscribir</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-32 w3-light-white w3-center w3-xlarge">
+  <div class="w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+  <p class="w3-medium"> <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">Moon Ligth </a></p>
+</footer>
+
+<script>
+// Slideshow
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+</body>
+</html>
+
